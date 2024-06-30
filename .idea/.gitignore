@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/token.json
+.gitignore
+/vcs.xml
+/modules.xml
+/misc.xml
+/credentials.json
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+
