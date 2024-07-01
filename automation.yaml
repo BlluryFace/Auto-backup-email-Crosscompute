@@ -1,0 +1,28 @@
+---
+crosscompute: 0.9.4
+name: Auto email backup
+version: 0.1.0
+
+input:
+  variables:
+    - id: emails
+      view: json
+      path: emails.json
+output:
+  variables:
+    - id: stored_emails
+      view: json
+      path: stored_emails.json
+batches:
+  - folder: batches/{emails}
+    name: Auto email backup
+    reference:
+      folder: batches/standard
+    configuration:
+      path: datasets/batches.csv
+    
+scripts:
+    - command: python3 run.py
+    
+environment:
+  interval: 30 minutes
